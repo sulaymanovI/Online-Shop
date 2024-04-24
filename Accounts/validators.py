@@ -46,3 +46,19 @@ def validate_password_strength(password):
         
         return True
 
+def find_None(data:list):
+    datalar = {
+        1 : "phone",
+        2 : "code",
+        3 : "type",
+        4 : "new_phone"
+    }
+    Nones = []
+    for none in data:
+
+        if none is None:
+
+            Nones.append(datalar[data.index(none)+1])
+    if len(Nones):
+        return Nones
+    return True

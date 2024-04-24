@@ -89,7 +89,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 
 class LogoutView(APIView):
     serializer_class = LogoutSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     authentication_classes = [JWTAuthentication]
 
     def post(self, request: Request, *args, **kwargs):
